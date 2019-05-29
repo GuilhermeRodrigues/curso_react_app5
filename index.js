@@ -14,14 +14,14 @@ export default class app5 extends Component {
     render() {
         return (
             <Navigator 
-                initialRoute={{ id: 'a'}}
+                initialRoute={{ id: 'a' }}
                 renderScene={(route, navigator) => {
                     /*Definir a cena com base na rota */
-                    if (route.id === 'a'){
+                    if (route.id === 'a') {
                         //Exibir a cenaPrincipal
-                        return(<CenaPrincipal />);
+                        return(<CenaPrincipal navigator={navigator} />);
                     }
-                    if (route.id === 'b'){
+                    if (route.id === 'b') {
                         //Exibir a cenaClientes
                         return(<CenaClientes />);
                     }
