@@ -23,7 +23,7 @@ export default class app5 extends Component {
                     }
                     if (route.id === 'b') {
                         //Exibir a cenaClientes
-                        return(<CenaClientes />);
+                        return(<CenaClientes navigator={navigator} />);
                     }
                 }}
             />

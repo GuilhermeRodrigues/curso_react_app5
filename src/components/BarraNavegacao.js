@@ -4,7 +4,8 @@ import {
     Text,
     View,
     StyleSheet,
-    Image
+    Image,
+    TouchableHighlight
 } from 'react-native';
 
 const bntVoltar = require('../imgs/btn_voltar.png');
@@ -14,7 +15,13 @@ export default class BarraNavegacao extends Component {
         if (this.props.voltar) {
             return (          
                 <View style={styles.barraTitulo}>
-                    <Image source={bntVoltar} />
+                    <TouchableHighlight
+                        onPress={() => {
+                            this.props.navigator.pop();
+                        }}
+                    >
+                        <Image source={bntVoltar} />
+                    </TouchableHighlight>
                     <Text style={styles.titulo}>ATM Consultoria</Text>
                 </View>
             );
