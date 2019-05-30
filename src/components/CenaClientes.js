@@ -15,8 +15,6 @@ const detalheClientes = require('../imgs/detalhe_cliente.png');
 const cliente1 = require('../imgs/cliente1.png');
 const cliente2 = require('../imgs/cliente2.png');
 
-//b9c941
-
 export default class CenaClientes extends Component {
     render() {
         return (
