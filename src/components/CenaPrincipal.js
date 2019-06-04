@@ -37,18 +37,39 @@ export default class CenaPrincipal extends Component {
 
                         <TouchableHighlight
                             onPress={() => {
-                                this.props.navigator.push({ id: 'b' });
+                                this.props.navigator.push({ id: 'cliente' });
                             }}
                         >
                             <Image style={styles.imgMenu} source={menuCliente} />  
                         </TouchableHighlight>  
 
-                        <Image style={styles.imgMenu} source={menuContato} />
+                        <TouchableHighlight
+                            onPress={() => {
+                                this.props.navigator.push({ id: 'contato' });
+                            }}
+                        >
+                            <Image style={styles.imgMenu} source={menuContato} />
+                        </TouchableHighlight>  
                     </View>
 
                     <View style={styles.menuGrupo}>
-                        <Image style={styles.imgMenu} source={menuEmpresa} />
-                        <Image style={styles.imgMenu} source={menuServico} />
+                        
+                        <TouchableHighlight
+                            onPress={() => {
+                                this.props.navigator.push({ id: 'empresa' });
+                            }}
+                        >
+                            <Image style={styles.imgMenu} source={menuEmpresa} />
+                        </TouchableHighlight>  
+                        
+                        <TouchableHighlight
+                            onPress={() => {
+                                this.props.navigator.push({ id: 'servico' });
+                            }}
+                        >
+                            <Image style={styles.imgMenu} source={menuServico} />
+                        </TouchableHighlight>  
+                        
                     </View>
 
                 </View>
